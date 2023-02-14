@@ -14,6 +14,18 @@ section{
     width: 500px;
     margin: auto;
     box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.274);
+    background-image: linear-gradient(360deg, aqua,
+    white);
+}
+img{
+    max-width: 100%;
+    min-width: 10%;
+    display: block;
+}
+.junto{
+    max-width: 30%;
+    min-width: 10%;
+    display: inline-block
 }
 div{
     text-align: center;
