@@ -56,12 +56,12 @@ function jokenpo(jescolha){
     cescolha = computador();
    if (ganhador(jescolha, cescolha) == 1){
         tela(jescolha, cescolha);
-        document.getElementById('res').innerHTML=`<h1>JOGADOR</h1><br><h1>GANHOU!!!</h1>`;
+        document.getElementById('res').innerHTML=`<h1>==JOGADOR==</h1><br><h1>&emsp;GANHOU!!!</h1>`;
     }else if (ganhador(jescolha, cescolha) == -1){
         tela(jescolha, cescolha);
-        document.getElementById('res').innerHTML=`<h1>COMPUTADOR</h1><br><h1>TE VENCEU!!!</h1>`;
+        document.getElementById('res').innerHTML=`<h1>COMPUTADOR</h1><br><h1>&nbsp;TE &nbsp;VENCEU!!!</h1>`;
     }else{
         tela(jescolha, cescolha);
-        document.getElementById('res').innerHTML=`<h1>JO KEN PO!!!</h1><br><h1>EMPATOU!!!</h1>`;
+        document.getElementById('res').innerHTML=`<h1>JO KEN PO!!!</h1><br><h1>&nbsp;EMPATOU!!!</h1>`;
     }
 }
