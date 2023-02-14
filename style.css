@@ -25,11 +25,14 @@ img{
 .junto{
     max-width: 30%;
     min-width: 10%;
-    display: inline-block
+    display: inline-block;
+    align-items: center;
+    justify-content: center;
 }
 div{
     text-align: center;
 }
+
 footer{
     color: white;
     text-align: center;

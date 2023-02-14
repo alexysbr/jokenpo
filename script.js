@@ -35,48 +35,33 @@ function ganhador(player, cpu){
     }
 }
 
-/*setTimeout(function() { definir a função }, tempo em milissegundos);*/
-
-
-
-function susp1(/*palavra*/) {
-    //if(palavra == 'JO')
-        document.getElementById('res').innerHTML=`<h1>JO KEN PO!!!</h1>`;
-        document.getElementById('jog').src='';
-        document.getElementById('ia').src='';
-    /*setInterval(function(){}, 1000);
-    document.getElementById('res').innerHTML=`<h1>KEN</h1>`;
-    setInterval(function(){}, 1000);
-    document.getElementById('res').innerHTML=`<h1>PO!!!</h1>`;*/
-    
+function tela(jog1 ,ia1,) {
+    if(jog1 == 0){
+        document.getElementById('jog').src='pedra.png';         
+    }else if(jog1 == 1){
+        document.getElementById('jog').src='papel.png';
+    }else if(jog1 == 2){
+        document.getElementById('jog').src='tesoura.png';
+    }
+    if(ia1 == 0){
+        document.getElementById('ia').src='pedra.png';
+    }else if(ia1 == 1){
+        document.getElementById('ia').src='papel.png';
+    }else if(ia1 == 2){
+        document.getElementById('ia').src='tesoura.png';
+    }        
   }
-function susp2() {
-    document.getElementById('res').innerHTML=`<h1>KEN</h1>`;
-}
-function susp3() {
-    document.getElementById('res').innerHTML=`<h1>PO!!!</h1>`;
-}
-
 
 function jokenpo(jescolha){
-    cescolha = 0;//computador();
-   if (ganhador(jescolha,cescolha) == 1){
-    susp1();
-        //(function (jescolha) {
-            //temp = setTimeout(susp1, 1000);
-            /*clearTimeout(temp);
-            temp=setTimeout(susp2, 1000);
-            clearTimeout(temp);
-            temp=setTimeout(susp3, 1000);
-            clearTimeout(temp);*/
-       // })(jescolha);
-       // alert("jogador ganhou");
-    }/*else if (ganhador(jescolha,cescolha) == -1){
-        suspense();
-        //alert("cpu ganhou");
+    cescolha = computador();
+   if (ganhador(jescolha, cescolha) == 1){
+        tela(jescolha, cescolha);
+        document.getElementById('res').innerHTML=`<h1>JOGADOR</h1><br><h1>GANHOU!!!</h1>`;
+    }else if (ganhador(jescolha, cescolha) == -1){
+        tela(jescolha, cescolha);
+        document.getElementById('res').innerHTML=`<h1>COMPUTADOR</h1><br><h1>TE VENCEU!!!</h1>`;
     }else{
-        suspense();
-       // alert("empate");
+        tela(jescolha, cescolha);
+        document.getElementById('res').innerHTML=`<h1>JO KEN PO!!!</h1><br><h1>EMPATOU!!!</h1>`;
     }
-    //alert(cescolha);*/
 }
